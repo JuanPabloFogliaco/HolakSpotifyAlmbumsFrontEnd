@@ -6,10 +6,10 @@ const SideBar = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   width: auto;
-  height: 93vh;
+  height: 100%;
   background-color: #000000;
-  padding-right: 80px;
-  padding-left: 20px;
+  padding-right: 90px;
+  padding-left: 30px;
 `;
 
 const Logo = styled.img`
@@ -19,7 +19,7 @@ const Logo = styled.img`
   justify-content: center;
   width: 135px;
   height: 40px;
-  padding-top: 20px;
+  padding-top: 30px;
 `;
 
 const Separator = styled.div`
@@ -36,7 +36,11 @@ const ItemHome = styled.div`
   height: 25px;
 `;
 
-const Title = styled.div`
+interface ITitle {
+  selected: boolean;
+}
+
+const Title = styled.div<ITitle>`
   width: 100%px;
   height: 25px;
   display: flex;
@@ -45,8 +49,8 @@ const Title = styled.div`
   justify-content: flex-start;
   padding-left: 12px;
   font-size: 15px;
-  font-weight: 700px;
-  color: #b2b2b2;
+  font-weight: bold;
+  color: ${(props) => (props.selected ? "#ffffff" : "#b2b2b2")};
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 `;

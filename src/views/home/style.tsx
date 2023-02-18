@@ -1,29 +1,28 @@
 import styled from "styled-components";
 
-const WrapperHomeView = styled.div`
+const WrapperView = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  height: 98vh;
-  color: white;
+  flex-direction: row;
+  background: white;
+  width: 100vw;
+  height: 100vh;
 `;
 
 const ColumnHomeView = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
 `;
 
 const RowHomeView = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   width: 100%;
   height: 100%;
   background-color: #5a5555;
-  position: relative;
 `;
 
-export { ColumnHomeView, WrapperHomeView, RowHomeView };
+export { ColumnHomeView, RowHomeView, WrapperView };

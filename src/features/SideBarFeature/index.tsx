@@ -10,17 +10,17 @@ const SideBarFeature = () => {
       <Separator />
       <ItemHome>
         <BiHomeAlt size={"30px"} color={"#b2b2b2"} />
-        <Title>Inicio</Title>
+        <Title selected={false}>Inicio</Title>
       </ItemHome>
       <Separator />
       <ItemHome>
-        <FiSearch size={"30px"} color={"#b2b2b2"} />
-        <Title>Buscar</Title>
+        <FiSearch size={"30px"} color={"#ffffff"} />
+        <Title selected={true}>Buscar</Title>
       </ItemHome>
       <Separator />
       <ItemHome>
         <VscLibrary size={"30px"} color={"#b2b2b2"} />
-        <Title>Tu bibloteca</Title>
+        <Title selected={false}>Tu bibloteca</Title>
       </ItemHome>
     </SideBar>
   );

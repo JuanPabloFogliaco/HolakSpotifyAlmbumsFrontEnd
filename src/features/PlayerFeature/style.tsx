@@ -5,11 +5,13 @@ const WrapperPlayerFeature = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  height: 15%;
-  background-color: #181818;
+  flex-wrap: wrap;
   position: relative;
-  padding-top: 33px;
+  width: 100%;
+  height: 10vh;
+  background-color: #181818;
+  color: #ffffff;
+  position: relative;
   border-top: 1px solid #d6d6d626;
 `;
 
@@ -77,6 +79,14 @@ const DetailAlbum = styled.div`
   padding-left: 15px;
 `;
 
+const WrapperOptionsControler = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: auto;
+  height: auto;
+`;
+
 export {
   WrapperPlayerFeature,
   RowControlers,
@@ -86,4 +96,5 @@ export {
   ColumnControlers,
   WrapperAlbumDetail,
   DetailAlbum,
+  WrapperOptionsControler
 };
