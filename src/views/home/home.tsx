@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import AlbumsFeature from "../../features/AlbumsFeature";
 import PlayerFeature from "../../features/PlayerFeature";
 import SideBarFeature from "../../features/SideBarFeature";
-import { ColumnHomeView, RowHomeView, WrapperHomeView } from "./style";
+import { WrapperView } from "./style";
 
 interface IProfile {
   email: string;
@@ -30,15 +30,10 @@ const HomeView = () => {
   }, []);
 
   return (
-    <WrapperHomeView>
-      <ColumnHomeView>
-        <RowHomeView>
-          <SideBarFeature />
-          <AlbumsFeature />
-        </RowHomeView>
-      </ColumnHomeView>
-      <PlayerFeature />
-    </WrapperHomeView>
+    <WrapperView>
+      <SideBarFeature />
+      <AlbumsFeature />
+    </WrapperView>
   );
 };
 
