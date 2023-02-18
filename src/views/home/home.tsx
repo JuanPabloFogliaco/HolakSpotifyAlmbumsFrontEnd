@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import AlbumsFeature from "../../features/AlbumsFeature";
+import PlayerFeature from "../../features/PlayerFeature";
 import SideBarFeature from "../../features/SideBarFeature";
-import { WrapperHomeView } from "./style";
+import { ColumnHomeView, RowHomeView, WrapperHomeView } from "./style";
 
 interface IProfile {
   email: string;
@@ -30,8 +31,13 @@ const HomeView = () => {
 
   return (
     <WrapperHomeView>
-      <SideBarFeature />
-      <AlbumsFeature></AlbumsFeature>
+      <ColumnHomeView>
+        <RowHomeView>
+          <SideBarFeature />
+          <AlbumsFeature />
+        </RowHomeView>
+      </ColumnHomeView>
+      <PlayerFeature />
     </WrapperHomeView>
   );
 };
