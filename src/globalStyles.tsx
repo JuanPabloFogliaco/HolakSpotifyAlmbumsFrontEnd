@@ -1,11 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    background: #202222;
+  body, html {
+    margin: 0px;
+    padding: 0px;
     font-family: Open-Sans, Helvetica, Sans-Serif;
+    box-sizing: border-box;
+    background-color: #181818;
   }
 `;
 
