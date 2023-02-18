@@ -7,6 +7,7 @@ import {
   WrapperTimeSong,
   WrapperAlbumDetail,
   DetailAlbum,
+  WrapperOptionsControler,
 } from "./style";
 import { BsDisplay, BsPlayCircleFill, BsArrowRepeat } from "react-icons/bs";
 import { IoPlaySkipBackSharp, IoPlaySkipForwardSharp } from "react-icons/io5";
@@ -19,8 +20,8 @@ const PlayerFeature = () => {
       <WrapperAlbumDetail>
         <SongImage></SongImage>
         <DetailAlbum>
-          <div>Ej: Ayer me llamo Mi Ex ...</div>
-          <div>KHEA, Lenny</div>
+          <div>Farolito </div>
+          <div>Los Piojos</div>
         </DetailAlbum>
       </WrapperAlbumDetail>
       <ColumnControlers>
@@ -38,14 +39,19 @@ const PlayerFeature = () => {
 
         <WrapperTimeSong></WrapperTimeSong>
       </ColumnControlers>
-      <TbMicrophone2 color="#bababa" size={"20px"} />
+     <WrapperOptionsControler>
+     <TbMicrophone2 color="#bababa" size={"20px"} />
+     <Separator/>
       <TbPlaylist color="#bababa" size={"20px"} />
+      <Separator/>
       <BsDisplay color="#bababa" size={"20px"} />
+      <Separator/>
       <TbVolume
         color="#bababa"
         size={"20px"}
         style={{ paddingRight: "125px" }}
       />
+     </WrapperOptionsControler>
     </WrapperPlayerFeature>
   );
 };

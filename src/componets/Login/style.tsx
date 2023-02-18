@@ -13,7 +13,7 @@ const ImgSportify = styled.img`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 75%;
+  width: 45%;
   height: 250px;
 `;
 
