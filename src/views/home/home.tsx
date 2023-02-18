@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import AlbumsFeatrure from "../../features/AlbumsFeature";
-import { ItemHome, Logo, SideBar, WrapperHomeView } from "./style";
+import AlbumsFeature from "../../features/AlbumsFeature";
+import SideBarFeature from "../../features/SideBarFeature";
+import { WrapperHomeView } from "./style";
 
 interface IProfile {
   email: string;
@@ -29,11 +30,8 @@ const HomeView = () => {
 
   return (
     <WrapperHomeView>
-      <SideBar>
-        <Logo src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_White.png"></Logo>
-        <ItemHome></ItemHome>
-      </SideBar>
-      <AlbumsFeatrure></AlbumsFeatrure>
+      <SideBarFeature />
+      <AlbumsFeature></AlbumsFeature>
     </WrapperHomeView>
   );
 };

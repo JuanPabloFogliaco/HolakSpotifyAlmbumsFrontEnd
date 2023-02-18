@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const AlbumsHome = styled.div`
-  width: 75%;
+  width: 100%;
   height: 93vh;
-  background-color: whitesmoke;
+  background-color: #121212;
   justify-content: right;
 `;
 
