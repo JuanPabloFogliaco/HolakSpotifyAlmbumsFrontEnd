@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import AlbumsFeature from "../../features/AlbumsFeature";
-import PlayerFeature from "../../features/PlayerFeature";
+import ContainterFeature from "../../features/ContainterFeature";
 import SideBarFeature from "../../features/SideBarFeature";
 import { WrapperView } from "./style";
 
@@ -18,21 +17,15 @@ const HomeView = () => {
     setProfile(profile.data);
   };
 
-  const ArtitsAlbums = () => {
-    return;
-  };
-
   useEffect(() => {
     const access_token = localStorage.getItem("access_token");
-    if (access_token == undefined && access_token == null) {
-      window.location.replace("http://localhost:3000/login");
-    } else Profile();
+    !access_token && window.location.replace("http://localhost:3000/login");
   }, []);
 
   return (
     <WrapperView>
       <SideBarFeature />
-      <AlbumsFeature />
+      <ContainterFeature />
     </WrapperView>
   );
 };
