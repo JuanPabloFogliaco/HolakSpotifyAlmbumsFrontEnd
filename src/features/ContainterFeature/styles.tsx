@@ -39,7 +39,18 @@ const ButtonBurger = styled.button`
   width: 43px;
   height: 43px;
   border-radius: 43px;
-  background-color: #1ed760;
+  background-color: #f3f5f3;
+  z-index: 1;
 `;
 
-export { Albums, Header, ColumnHeader, ButtonBurger };
+const ContainerWrapper = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f4f4;
+`;
+
+export { Albums, Header, ColumnHeader, ButtonBurger, ContainerWrapper };

@@ -1,14 +1,13 @@
-import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { Search, WrapperSearch } from "./style";
 
-const SearchComponent = () => {
-  const [search, setSearch] = useState();
+interface ISearchComponent {
+  onChangeSearch: (e: any) => void;
+  onKeyDownSearch: (e: any) => void;
+}
 
-  const onChangeSearch = (e: any) => {
-    setSearch(e.target.value);
-  };
-
+const SearchComponent = (props: ISearchComponent) => {
+  const { onChangeSearch, onKeyDownSearch } = props;
   return (
     <WrapperSearch>
       <FiSearch
@@ -18,8 +17,9 @@ const SearchComponent = () => {
       />
       <Search
         type={"text"}
-        onChange={(e) => onChangeSearch(e)}
+        onChange={(e: any) => onChangeSearch(e)}
         placeholder="¿Que te apetece escuchar?"
+        onKeyDown={(e: any) => onKeyDownSearch(e)}
       />
     </WrapperSearch>
   );
